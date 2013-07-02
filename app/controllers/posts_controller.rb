@@ -1,6 +1,10 @@
 class PostsController < ApplicationController
   def index
   	@name = "Pati Silva"
-  	@post_titles=[]
+  	@posts = Post.all
+  end
+
+  def show
+  	@post = Post.find(params[:id])
   end
 end
