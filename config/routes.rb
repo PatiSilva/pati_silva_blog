@@ -1,6 +1,13 @@
 PatiSilvaBlog::Application.routes.draw do
   get '/posts' => 'posts#index'
   get '/post/:id' => 'posts#show', as: 'post'
+  get '/posts/new' => 'posts#new', as: 'newpost'
+  post 'posts' => 'posts#create', as: 'create_post'
+  get '/post/:id/edit' => 'posts#edit', as: 'edit_post'
+  put '/post/:id'=> 'posts#update', as: 'update_post'
+  # delete 'posts/:id' => 'posts/delete', as: 'delete_post'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
