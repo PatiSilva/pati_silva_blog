@@ -1,8 +1,16 @@
 %h1= "#{@name}'s Blog"
 %body
-	%p Me dicen la Riena Pati
-	%p Me gusta 'code'
+	%p My new blog.
+	%p Enjoy!
 	- @posts.each do |t|
 		=link_to(t.title, post_path(t))
 		%br
 	
+
+
+
+//def self.create(hash)
+//end
+
+
+//Post.create(title: "blah", body: "blahblah")
